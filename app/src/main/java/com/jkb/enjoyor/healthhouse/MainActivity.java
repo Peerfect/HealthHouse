@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 
+import com.jkb.enjoyor.healthhouse.bean.User;
+import com.jkb.enjoyor.healthhouse.dao.UserDao;
 import com.jkb.enjoyor.healthhouse.net.AsyncHttpUtil;
 import com.jkb.enjoyor.healthhouse.ui.BaseActivity;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -25,5 +27,12 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setImmerseLayout(findViewById(R.id.common_back));
+//        User u = new User();
+//        u.setId(1);
+//        u.setName("张鸿洋");
+//
+//        new UserDao(this).add(u);
+//
+//        Log.i("zxw", new UserDao(this).get().getName());
     }
 }

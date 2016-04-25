@@ -8,8 +8,20 @@ import org.json.JSONTokener;
  * Created by YuanYuan on 2016/4/25.
  */
 public class ApiMessage {
-
-    public int Code = 1001;
+    //通用状态,&#32;&#32;&#32;成功的以正数开头，失败的以负数（-）开头
+//    public &#32;static &#32;final &#32;int&#32;STATUS_SUCCESS&#32;=&#32;1001;&#32;//操作成功（数据查询，保存，更新…………………………）
+//    public &#32;static &#32;final &#32;int&#32;STATUS_FAIL&#32;=&#32;-1001;&#32;//操作失败（数据查询，保存，更新…………………………）
+//    public &#32;static &#32;final &#32;int&#32;STATUS_INNERERROR&#32;=&#32;-500;//内部错误
+//    public &#32;static &#32;final &#32;int&#32;STATUS_NOMORE&#32;=&#32;-200;//没有更多的数据
+//    public &#32;static &#32;final &#32;int&#32;STATUS_NORECORD&#32;=&#32;-204;//没有记录
+//    public &#32;static &#32;&#32;final &#32;int&#32;STATUS_ERROR_PARAM=-100;//参数验证错误
+    private int STATUS_SUCCESS = 1001;//操作成功
+    private int STATUS_FAIL = -1001;//操作失败
+    private int STATUS_INNERERROR = -500;//内部错误
+    private int STATUS_NOMORE = -200;//没有更多的数据
+    private int STATUS_NORECORD = -204;//没有记录
+    private int STATUS_ERROR_PARAM = -100;//参数验证错误
+    public int Code;
     public String Msg = "";
     public String Data = "";
 
